@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import type { OptionState } from '../../types'
 
 interface AnswerOptionProps {
@@ -18,7 +19,7 @@ const LABEL_GRADIENTS: Record<string, string> = {
 export default function AnswerOption({ label, text, state, disabled, onClick }: AnswerOptionProps) {
   let containerClass = ''
   let badgeClass = ''
-  let badgeStyle: React.CSSProperties = {}
+  let badgeStyle: CSSProperties = {}
 
   switch (state) {
     case 'idle':
